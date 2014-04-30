@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="strutsBean" extends="struts-default" namespace="/">
+
+		<action name="login" class="loginAction">
+			<result name="consumersuccess">/consumer/CpersonalInfo.jsp</result>
+			<result name="adminsuccess">/admin/showcon.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="update" class="consumerAction">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="orderlist" class="consumerAction" method="getOrder">
+			<result name="success">/consumer/orderlist.jsp</result>
+			<result name="fail">/index.jsp</result>
+		</action>
+		
+		<action name="commentlist" class="consumerAction" method="getOrder">
+			<result name="success">/consumer/commentlist.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="selectcons" class="consumerAction" method="selectCon">
+			<result name="success">/consumer/comment.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="comment" class="consumerAction" method="setComment">
+			<result name="success">/consumer/commentlist.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		
+		
+		
+		<action name="addproduct" class="sellerAction" method="addProduct">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showproduct" class="sellerAction" method="showProduct">
+			<result name="success">/seller/showproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="selectproduct" class="sellerAction" method="selectProduct">
+			<result name="success">/seller/editproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="editproduct" class="sellerAction" method="editProduct">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="spproduct" class="sellerAction" method="showProduct">
+			<result name="success">/seller/upproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="upproduct" class="sellerAction" method="upProduct">
+			<result name="success">/seller/showproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showup" class="sellerAction" method="showSp">
+			<result name="success">/seller/showup.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="cancelup" class="sellerAction" method="cancelUp">
+			<result name="success">/seller/showup.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showall" class="sellerAction" method="showSp">
+			<result name="success">/seller/showall.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showorder" class="sellerAction" method="showOneOrder">
+			<result name="success">/seller/showorder.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="selectorder" class="sellerAction" method="selectOrder">
+			<result name="success">/seller/sendproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="sendproduct" class="sellerAction" method="sendProduct">
+			<result name="success">/seller/showorder.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		
+
+		
+		<action name="showcon" class="adminAction" method="getAllConInfo">
+			<result name="success">/admin/showcon.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="deletecon" class="adminAction" method="deleteCon">
+			<result name="success">/admin/showcon.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="selectcon" class="adminAction" method="selectCon">
+			<result name="success">/admin/editcon.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="editcon" class="adminAction" method="editCon">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showaproduct" class="adminAction" method="getAllProduct">
+			<result name="success">/admin/showproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		
+		<action name="deleteproduct" class="adminAction" method="deleteProduct">
+			<result name="success">/admin/showproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		
+		<action name="selectaproduct" class="adminAction" method="selectProduct">
+			<result name="success">/admin/editproduct.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+				
+		<action name="editaproduct" class="adminAction" method="editProduct">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showsp" class="adminAction" method="getAllSP">
+			<result name="success">/admin/showsp.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+			
+		<action name="showas" class="adminAction" method="getAllSP">
+			<result name="success">/products.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="deletesp" class="adminAction" method="deleteSP">
+			<result name="success">/admin/showsp.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		
+		<action name="showaorder" class="adminAction"  method="getAllOrder">
+			<result name="success">/admin/showorder.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="deleteorder" class="adminAction"  method="deleteOrder">
+			<result name="success">/admin/showorder.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="updatecomment" class="adminAction"  method="getAllOrder">
+			<result name="success">/admin/updatecomment.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="selectcomment" class="adminAction"  method="selectComment">
+			<result name="success">/admin/editcomment.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="editacomment" class="adminAction"  method="updateComment">
+			<result name="success">/admin/updatecomment.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		
+		<action name="cartadd" class="shopCartAction"  method="cartAdd">
+			<result name="success">/findex.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="cartlist" class="shopCartAction"  method="cartList">
+			<result name="success">/shoppingcart.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="cartchangenum" class="shopCartAction"  method="cartChangeNum">
+			<result name="success">/shoppingcart.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="delproduct" class="shopCartAction"  method="delProduct">
+			<result name="success">/shoppingcart.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="buyproduct" class="shopCartAction"  method="buyProduct">
+			<result name="success">/successbuy.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+
+   </package>
+</struts>    
+
